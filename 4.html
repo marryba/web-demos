@@ -3,165 +3,49 @@
 
 <head>
     <meta charset="utf-8">
-    <title>第四次作业</title>
+    <title>4</title>
     <style>
         div {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             background: red;
             position: relative;
-            animation: myfirst 5s linear 2s infinite alternate;
-            /* Firefox: */
-            -moz-animation: myfirst 5s linear 2s infinite alternate;
-            /* Safari and Chrome: */
-            -webkit-animation: myfirst 5s linear 2s infinite alternate;
-            /* Opera: */
-            -o-animation: myfirst 5s linear 2s infinite alternate;
+            animation: m1 5s linear 2s infinite alternate;
+            1-animation: m1 5s linear 2s infinite alternate;
+            2-animation: m1 5s linear 2s infinite alternate;
+            3-animation: m1 5s linear 2s infinite alternate;
         }
 
-        @keyframes myfirst {
-            0% {
-                background: red;
-                left: 0px;
-                top: 0px;
-            }
-
-            25% {
-                background: yellow;
-                left: 200px;
-                top: 0px;
-            }
-
-            50% {
-                background: green;
-                left: 200px;
-                top: 200px;
-            }
-
-            75% {
-                background: purple;
-                left: 0px;
-                top: 200px;
-            }
-
-            100% {
-                background: red;
-                left: 0px;
-                top: 0px;
-            }
+        @keyframes m1 {
+            0% {background: red;left: 0px;top: 0px;}
+            25% {background: yellow;left: 200px;top: 0px;}
+            50% {background: green;left: 200px;top: 200px;}
+            75% {background: purple;left: 0px;top: 200px;}
+            100% {background: red;left: 0px;top: 0px;}
         }
+        @1-keyframes m1
+            {0% {background: red;left: 0px;top: 0px;}
+            25% {background: yellow;left: 200px;top: 0px;}
+            50% {background: green;left: 200px;top: 200px;}
+            75% {background: purple;left: 0px;top: 200px;}
+            100% {background: red;left: 0px;top: 0px;}}
 
-        @-moz-keyframes myfirst
-
-        /* Firefox */
-            {
-            0% {
-                background: red;
-                left: 0px;
-                top: 0px;
-            }
-
-            25% {
-                background: yellow;
-                left: 200px;
-                top: 0px;
-            }
-
-            50% {
-                background: green;
-                left: 200px;
-                top: 200px;
-            }
-
-            75% {
-                background: purple;
-                left: 0px;
-                top: 200px;
-            }
-
-            100% {
-                background: red;
-                left: 0px;
-                top: 0px;
-            }
-        }
-
-        @-webkit-keyframes myfirst
-
-        /* Safari and Chrome */
-            {
-            0% {
-                background: red;
-                left: 0px;
-                top: 0px;
-            }
-
-            25% {
-                background: yellow;
-                left: 200px;
-                top: 0px;
-            }
-
-            50% {
-                background: green;
-                left: 200px;
-                top: 200px;
-            }
-
-            75% {
-                background: purple;
-                left: 0px;
-                top: 200px;
-            }
-
-            100% {
-                background: red;
-                left: 0px;
-                top: 0px;
-            }
-        }
-
-        @-o-keyframes myfirst
-
-        /* Opera */
-            {
-            0% {
-                background: red;
-                left: 0px;
-                top: 0px;
-            }
-
-            25% {
-                background: yellow;
-                left: 200px;
-                top: 0px;
-            }
-
-            50% {
-                background: green;
-                left: 200px;
-                top: 200px;
-            }
-
-            75% {
-                background: purple;
-                left: 0px;
-                top: 200px;
-            }
-
-            100% {
-                background: red;
-                left: 0px;
-                top: 0px;
-            }
-        }
+        @2-keyframes m1
+            {0% {background: red;left: 0px;top: 0px;}
+            25% {background: yellow;left: 200px;top: 0px;}
+            50% {background: green;left: 200px;top: 200px;}
+            75% {background: purple;left: 0px;top: 200px;}
+            100% {background: red;left: 0px;top: 0px;}}
+        @3-keyframes m1
+            {0% {background: red; left: 0px; top: 0px;}
+            25% { background: yellow;left: 200px; top: 0px;}
+            50% {background: green;left: 200px; top: 200px; }
+            75% {background: purple; left: 0px;top: 200px; }
+            100% { background: red;left: 0px; top: 0px;}
+			 }
     </style>
 </head>
-
 <body>
-
-    <div></div>
-
+<div></div>
 </body>
-
 </html>
