@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>8</title>
+    <script>
+        function a1() {
+            var usernameValue = document.getElementById("username").value;
+            if (usernameValue == "") {
+                alert("用户名不能为空");
+                return false;
+            }
+            a2();
+            a3();
+            return a2()&&a2();
+        }
+        function a2() {
+            var upwd = document.getElementById("pwd").value;
+            var reg = /^[a-z]\w{5,7}$/;
+            var span = document.getElementById("pwdSpan");
+            if (span == "" || span == null) {
+                span.innerHTML = "*密码不能为空";
+                span.style.color = "blue";
+                return false;
+            } else if (reg.test(upwd)) {
+                span.innerHTML = "*密码通过";
+                span.style.color = "pink";
+                return true;
+            } else {
+                span.innerHTML = "*密码格式不符"
+                span.style.color = "red";
+                return false;
+            }	
+            a3();
+        }
+        function a3() {
+            var pwd = document.getElementById("pwd").value;
+            var pwd2 = document.getElementById("pwd2").value;
+            var span = document.getElementById("pwd2Span");
+            if (pwd2 == "" || pwd2 == null) {
+                span.innerHTML = "*密码不能为空";
+                span.style.color = "red";
+                return false;
+            } else if (pwd === pwd2) {
+                span.innerHTML = "*密码通过";
+                span.style.color = "green";
+                return true;
+            } else {
+                span.innerHTML = "*密码不同，请重新输入"
+                span.style.color = "purple";
+                return false;
+            }
+        }
+    </script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body {
+            background-color:white;
+        }
+        .rg_layout {
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            background-color: rgb(0,255,255);
+            border: 6px solid ＃98FB98;
+            margin-top: 20px;
+        }
+        .rg_left {
+            border: 2px solid red;
+            width: 300px;
+            padding: 20px;
+            float: left;
+        }
+        .rg_center {
+            width: 400px;
+            float: left;
+        }
+        .td_left {
+            width: 150px;
+            text-align: right;
+            height: 40px;
+        }
+        .td_right {
+            padding-left: 10px;
+        }
+        #username,
+        #pwd2,
+        #pwd,
+        #checkcode {
+            width: 100px;
+        }
+        #btn-sub {
+            width: 100px;
+            height: 30px;
+            background-color: ＃ffdab9;
+            border: 2px solid ＃ffdab9;
+            border-radius: 4px;
+        }
+        #img_check {
+            height: 30px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="rg_layout">
+        <div class="rg_center">
+            <form action="#" method="get" onsubmit="return a2()">
+                <table>
+                    <tr>
+                        <td class="td_left">
+                            <label for="username">用户名：</label>
+                        </td>
+                        <td class="td_right">
+                            <input type="text" name="username" placeholder="请输入用户名" id="username">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_left">
+                            <label> 密码： </label> 
+                        </td>
+                        <td class="td_right">
+                            <input type="password" name="pwd" id="pwd" value="" placeholder="请输入密码" onblur="a2()" />
+                            <span id="pwdSpan"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_left">
+                           <label>确认密码：</label>
+                        </td>
+                        <td class="td_right">
+                            <input type="password" name="pwd2" id="pwd2" value="" placeholder="两次密码必须相同" onblur=" a3()" />
+                            <span id="pwd2Span"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center"><input type="submit" value="注册" id="btn-sub" /></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
